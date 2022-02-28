@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style:none;
+}
+
+body{
+    color:
+    
+    honeydew;
+    font-weight: bold;
+}
+
+.container{
+    width:95%;
+    height:100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 5px;
+    grid-auto-flow: dense;
+    margin:auto;
+    margin: 20px auto;
+    grid-template-rows:repeat(1,1fr);
+    grid-auto-rows:1fr;
+}
+
+.container img {
+    width: 100%;
+    height:60vh;
+    /* height:100vh; */
+    cursor:pointer;
+    object-fit:cover;
+}
+.container .vertical{
+    grid-column:  auto /span 2;
+    grid-row: auto / span 2;
+    position:relative;
+    overflow:hidden;
+}
+
+
+.container .horizontal{
+    grid-column: auto / span 4;
+    grid-row: auto / span 2;
+    overflow:hidden; 
+    position:relative;
+    overflow:hidden;
+}
+
+/* .container .vertical{
+    grid-column:  auto /span 2;
+    grid-row: auto / span 2;
+} */
+
+.container .vertical .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position:absolute;
+    left:0;
+    bottom:0;
+    padding: 10px 20px;
+    transform:translateY(150px);
+    transition:0.3s all ease;
+
+}
+
+
+.container .horizontal .content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position:absolute;
+    left:0;
+    /* right:15px; */
+    bottom:6px;
+    padding: 10px 20px;
+    transform:translateY(70px);
+    transition:0.3s all ease;
+}
+
+.container .vertical .content ul li{
+    display: inline-block;
+    cursor:pointer;
+}
+
+.container .horizontal .content ul li{
+    display: inline-block;
+    cursor:pointer;
+}
+
+.container .vertical:hover .content{
+    transform:translateY(0);
+}
+
+.container .horizontal:hover .content{
+    transform:translateY(0);
+}
+
+ .right ul li:hover{
+     color:black;
+ }
+
+.vertical{
+    width: 100%;
+    height:auto;
+    background: green;
+}
+ .vertical .one{
+     mix-blend-mode: overlay;
+ }
+
+ .horizontal{
+    width: 100%;
+    height:auto;
+    background: greenyellow;
+ }
+.horizontal .one1{
+    mix-blend-mode:overlay;
